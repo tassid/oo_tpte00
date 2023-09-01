@@ -10,15 +10,15 @@ class Program
         Console.Write("Digite sua altura (m): ");
         double height = Convert.ToDouble(Console.ReadLine());
 
-        double bmi = weight / (height * height);
+        double imc = weight / (height * height);
 
-        Console.WriteLine($"Seu IMC é: {bmi:F2}");
+        Console.WriteLine($"Seu IMC é: {imc:F2}");
 
-        if (bmi < 18.5)
+        if (imc < 18.5)
             Console.WriteLine("Abaixo do peso");
-        else if (bmi < 24.9)
+        else if (imc < 24.9)
             Console.WriteLine("Peso normal");
-        else if (bmi < 29.9)
+        else if (imc < 29.9)
             Console.WriteLine("Sobrepeso");
         else
             Console.WriteLine("Obeso");
