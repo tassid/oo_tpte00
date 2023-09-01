@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-    static bool IsPrime(int num)
+    static bool EhPrimo(int num)
     {
         if (num <= 1)
             return false;
@@ -26,7 +26,7 @@ class Program
         Console.Write("Digite um número inteiro: ");
         int num = Convert.ToInt32(Console.ReadLine());
 
-        if (IsPrime(num))
+        if (EhPrimo(num))
             Console.WriteLine($"{num} é primo.");
         else
             Console.WriteLine($"{num} não é primo.");

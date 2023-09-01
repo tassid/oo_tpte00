@@ -8,14 +8,14 @@ class Program
         double num1 = Convert.ToDouble(Console.ReadLine());
 
         Console.Write("Digite o operador (+, -, *, /): ");
-        char op = Console.ReadKey().KeyChar;
+        char operador = Console.ReadKey().KeyChar;
         Console.WriteLine();
 
         Console.Write("Digite o segundo número: ");
         double num2 = Convert.ToDouble(Console.ReadLine());
 
         double result = 0;
-        switch (op)
+        switch (operador)
         {
             case '+':
                 result = num1 + num2;
@@ -30,7 +30,7 @@ class Program
                 result = num1 / num2;
                 break;
             default:
-                Console.WriteLine("Operação inválida");
+                Console.WriteLine("operação inválida");
                 return;
         }
 

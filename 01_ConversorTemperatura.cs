@@ -2,12 +2,12 @@ using System;
 
 class Program
 {
-    static double CelsiusToFahrenheit(double celsius)
+    static double CelsiusFahrenheit(double celsius)
     {
         return celsius * 9 / 5 + 32;
     }
 
-    static double FahrenheitToCelsius(double fahrenheit)
+    static double FahrenheitCelsius(double fahrenheit)
     {
         return (fahrenheit - 32) * 5 / 9;
     }
@@ -15,20 +15,20 @@ class Program
     static void Main(string[] args)
     {
         Console.Write("Escolha a unidade de origem (C/F): ");
-        char choice = char.ToUpper(Console.ReadKey().KeyChar);
+        char escolha = char.ToUpper(Console.ReadKey().KeyChar);
         Console.WriteLine();
 
         Console.Write("Digite a temperatura: ");
         double temperature = Convert.ToDouble(Console.ReadLine());
 
-        if (choice == 'C')
+        if (escolha == 'C')
         {
-            double convertedTemp = CelsiusToFahrenheit(temperature);
+            double convertedTemp = CelsiusFahrenheit(temperature);
             Console.WriteLine($"{temperature}°C equivale a {convertedTemp}°F");
         }
-        else if (choice == 'F')
+        else if (escolha == 'F')
         {
-            double convertedTemp = FahrenheitToCelsius(temperature);
+            double convertedTemp = FahrenheitCelsius(temperature);
             Console.WriteLine($"{temperature}°F equivale a {convertedTemp}°C");
         }
     }

@@ -4,8 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        const int totalSeats = 50;
-        bool[] seats = new bool[totalSeats];
+        const int totalLugares = 50;
+        bool[] lugar = new bool[totalLugares];
 
         while (true)
         {
@@ -15,22 +15,22 @@ class Program
             if (input.ToLower() == "sair")
                 break;
 
-            int seatNumber = Convert.ToInt32(input) - 1;
+            int lugarNumero = Convert.ToInt32(input) - 1;
 
-            if (seatNumber < 0 || seatNumber >= totalSeats)
+            if (lugarNumero < 0 || lugarNumero >= totalLugares)
             {
                 Console.WriteLine("Número de assento inválido.");
                 continue;
             }
 
-            if (seats[seatNumber])
+            if (lugar[lugarNumero])
             {
                 Console.WriteLine("Assento já reservado.");
             }
             else
             {
-                seats[seatNumber] = true;
-                Console.WriteLine($"Assento {seatNumber + 1} reservado.");
+                lugar[lugarNumero] = true;
+                Console.WriteLine($"Assento {lugarNumero + 1} reservado.");
             }
         }
     }

@@ -8,13 +8,13 @@ class Program
         double principal = Convert.ToDouble(Console.ReadLine());
 
         Console.Write("Digite a taxa de juros (em decimal): ");
-        double interestRate = Convert.ToDouble(Console.ReadLine());
+        double taxa = Convert.ToDouble(Console.ReadLine());
 
         Console.Write("Digite o número de períodos: ");
-        int periods = Convert.ToInt32(Console.ReadLine());
+        int tempo = Convert.ToInt32(Console.ReadLine());
 
-        double finalAmount = principal * Math.Pow(1 + interestRate, periods);
+        double total = principal * Math.Pow(1 + taxa, tempo);
 
-        Console.WriteLine($"Montante final: {finalAmount:C}");
+        Console.WriteLine($"Montante final: {total:C}");
     }
 }

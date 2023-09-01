@@ -5,30 +5,30 @@ class Program
     static void Main(string[] args)
     {
         int totalItems = 0;
-        double totalAmount = 0;
+        double totalValor = 0;
 
         while (true)
         {
             Console.Write("Nome do produto (ou 'sair' para finalizar): ");
-            string productName = Console.ReadLine();
+            string nomeProduto = Console.ReadLine();
 
-            if (productName.ToLower() == "sair")
+            if (nomeProduto.ToLower() == "sair")
                 break;
 
             Console.Write("Quantidade: ");
-            int quantity = Convert.ToInt32(Console.ReadLine());
+            int quantidade = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Preço por unidade: ");
-            double pricePerUnit = Convert.ToDouble(Console.ReadLine());
+            double precoPorUnidade = Convert.ToDouble(Console.ReadLine());
 
-            double subtotal = quantity * pricePerUnit;
+            double subtotal = quantidade * precoPorUnidade;
             Console.WriteLine($"Subtotal: {subtotal}");
 
-            totalItems += quantity;
-            totalAmount += subtotal;
+            totalItems += quantidade;
+            totalValor += subtotal;
         }
 
         Console.WriteLine($"Total de itens vendidos: {totalItems}");
-        Console.WriteLine($"Total da venda: {totalAmount:C}");
+        Console.WriteLine($"Total da venda: {totalValor:C}");
     }
 }
